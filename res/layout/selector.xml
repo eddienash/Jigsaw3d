@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <!--
+    <include
+        android:id="@+id/adView"
+        layout="@layout/adview" />
+    -->
+
+    <!-- android:layout_above="@id/adView" -->
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/layoutSelectorRoot"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/txtSelTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:text="@string/sel_model_prompt"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:textStyle="bold" >
+        </TextView>
+
+        <ScrollView
+            android:id="@+id/layoutDifficulty"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" >
+
+            <RadioGroup
+                android:id="@+id/groupDifficulties"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#ff000000"
+                android:orientation="vertical" >
+
+                <!-- template of attributes, not really displayed -->
+
+                <RadioButton
+                    android:id="@+id/rdoDifficultyTemplate"
+                    style="@style/RadioButton"
+                    android:layout_marginTop="10dp"
+                    android:paddingLeft="48dp" />
+            </RadioGroup>
+        </ScrollView>
+
+        <ScrollView
+            android:id="@+id/layoutSelector"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" >
+
+            <RadioGroup
+                android:id="@+id/groupSelectors"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#ff000000"
+                android:orientation="vertical" >
+
+                <!-- template of attributes, not really displayed -->
+
+                <RadioButton
+                    android:id="@+id/rdoSelectorTemplate"
+                    style="@style/RadioButton"
+                    android:layout_marginTop="10dp"
+                    android:drawableLeft="@drawable/icon"
+                    android:drawablePadding="12dp"
+                    android:paddingLeft="48dp" />
+            </RadioGroup>
+        </ScrollView>
+    </LinearLayout>
+
+</RelativeLayout>

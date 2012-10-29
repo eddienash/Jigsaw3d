@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <!--
+    <include
+        android:id="@+id/adView"
+        layout="@layout/adview" />
+    -->
+
+    <!-- android:layout_above="@id/adView" -->
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/layoutWelcome"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/txtWelcomeTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:text="@string/btn_welcome_title"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:textStyle="bold" >
+        </TextView>
+
+        <Button
+            android:id="@+id/btnNewPuzzle"
+            style="@style/MenuButton"
+            android:layout_marginTop="10dp"
+            android:text="@string/btn_welcome_new" />
+
+        <Button
+            android:id="@+id/btnResumePuzzle"
+            style="@style/MenuButton"
+            android:layout_marginTop="10dp"
+            android:text="@string/btn_welcome_resume" />
+
+        <Button
+            android:id="@+id/btnHelp"
+            style="@style/MenuButton"
+            android:layout_marginTop="10dp"
+            android:text="@string/btn_welcome_help" />
+
+        <Button
+            android:id="@+id/btnStatistics"
+            style="@style/MenuButton"
+            android:layout_marginTop="10dp"
+            android:text="@string/btn_welcome_stats" />
+
+        <Button
+            android:id="@+id/btnPreference"
+            style="@style/MenuButton"
+            android:layout_marginTop="10dp"
+            android:text="@string/btn_welcome_prefs" />
+    </LinearLayout>
+
+</RelativeLayout>

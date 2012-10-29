@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <!-- ********** Welcome Buttons / menu ********** -->
+    <string name="btn_welcome_title">Jigsaw3D</string>
+    <string name="btn_welcome_new">Select a puzzle</string>
+    <string name="btn_welcome_resume">Resume</string>
+    <string name="btn_welcome_help">Get Help, Give Feedback, etc.</string>
+    <string name="btn_welcome_prefs">Preferences</string>
+    <string name="btn_welcome_stats">Statistics</string>
+    <string name="btn_welcome_feedback">Feedback</string>
+    
+    <!-- ********** miscellaneous strings ********** -->
+    <string name="msg_shuffling">Shuffling&#8230;.</string>
+    <string name="msg_loading">Loading puzzle&#8230;.</string>
+    
+    <!-- ********** Feedback strings ********** -->
+    <string name="btn_send">Send</string>
+    <string name="msg_subject">Subject</string>
+    <string name="msg_message">Message</string>
+    
+    <!-- ********** Puzzle Buttons / menu ********** -->
+    <string name="btn_start">Start</string>
+    <string name="btn_resume">Resume</string>
+    <string name="mnu_help">Help</string>
+    <string name="mnu_prefs">Preferences</string>
+    <string name="mnu_restart">Restart</string>
+    <string name="dlg_winner">Congratulations!</string>
+    <string name="btn_won_get_new">Select a new puzzle</string>
+    <string name="btn_won_get_more">Get more puzzles</string>
+    <string name="btn_won_stats">Statistics</string>
+    <string name="btn_won_quit">Quit</string>
+    
+    <string name="btn_zoom_in">Zoom in</string>
+    <string name="btn_zoom_out">Zoom out</string>
+    <string name="btn_pan">Pan mode</string>
+    <string name="btn_rotate">Rotate mode</string>
+    
+    <!-- ************* User Preferences ************ -->
+    
+    <!-- ******** Hints ******* -->
+    <string name="prefs_hint_title">Hints</string>
+    <string name="prefs_hint_key">prfHints</string>
+
+    <string-array name="prefs_hint_entries">
+        <item>Bounding Box</item>
+        <item>Points</item>
+        </string-array>
+
+    <string-array
+        name="prefs_hint_values">
+        <item>boxes</item>
+        <item>dots</item>
+        </string-array>
+    <string name="prefs_hint_default">boxes</string>
+    
+    <!-- ******** Sound effects ******* -->
+    <string name="prefs_sound_title">Sounds</string>
+    <string name="prefs_sound_key">prfSound</string>
+    <string name="prefs_sound_default">true</string>
+    
+    <!-- ******** Backdrop ******* -->
+    <string name="prefs_backdrops_title">Puzzle Background</string>
+    <string name="prefs_backdrops_key">prfBackdrop</string>
+    
+    <string-array name="prefs_backdrops_entries">
+        <item>Rattan</item>
+        <item>Grass</item>
+        <item>Blue Carpet</item>
+        <item>Yellow Carpet</item>
+        <item>White Carpet</item>
+        <item>Test1</item>
+        </string-array>
+    
+    <string-array
+        name="prefs_backdrops_values">
+        <item>rattan.jpg</item>
+        <item>green_grass.jpg</item>
+        <item>blue_carpet.jpg</item>
+        <item>yellow_carpet.jpg</item>
+        <item>white_carpet.jpg</item>
+        <item>test1.jpg</item>
+        </string-array>
+    <string name="prefs_backdrops_default">rattan.jpg</string>
+    
+    <!-- ******** Reset Statistics ******* -->
+    <string name="prefs_reset_title">Reset all statistics</string>
+    <string name="prefs_reset_prompt">This will erase all statistics for all models. Are you sure?</string>
+    <string name="prefs_reset_ok">Reset</string>
+    
+    <!-- ***************** Selector **************** -->
+    <string name="sel_model_prompt">Please select a model</string>
+    
+    <string name="sel_default_model_name">cube</string>
+    
+    <string name="sel_difficulty_prompt">Please select difficulty</string>
+    <string-array name="sel_difficulties_prompts">
+        <item>Really easy: less than 10 pieces</item>
+        <item>Easy: 10 to 19 pieces</item>
+        <item>Moderate: 20 to 29 pieces</item>
+        <item>Hard: 30 to 39 pieces</item>
+        <item>Really hard: 40 or more pieces</item>
+    </string-array>
+    
+    <!-- ***************** Statistics **************** -->
+    <string name="stat_label_title">Over All Models</string>
+    <string name="stat_played_title">Played</string>
+    <string name="stat_completed_title">Completed</string>
+    <string name="stat_average_title">Average</string>
+    <string name="stat_best_title">Best</string>
+    
+</resources>

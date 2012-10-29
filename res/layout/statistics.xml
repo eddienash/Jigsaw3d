@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <!--
+    <include
+        android:id="@+id/adView"
+        layout="@layout/adview" />
+    -->
+
+    <!-- android:layout_above="@id/adView" -->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffff" >
+
+        <TableLayout
+            android:id="@+id/stat_table_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffff"
+            android:orientation="vertical"
+            android:shrinkColumns="*"
+            android:stretchColumns="*" >
+
+            <TableRow android:id="@+id/stat_title_row_template" >
+
+                <TextView
+                    android:id="@+id/stat_title_label_template"
+                    android:gravity="left"
+                    android:paddingLeft="5dp"
+                    android:paddingTop="7dp"
+                    android:textColor="#f008" />
+
+                <TextView
+                    android:id="@+id/stat_title_played_template"
+                    android:gravity="right"
+                    android:paddingRight="5dp"
+                    android:paddingTop="7dp"
+                    android:text="@string/stat_played_title"
+                    android:textColor="#f008" />
+
+                <TextView
+                    android:id="@+id/stat_title_completed_template"
+                    android:gravity="right"
+                    android:paddingRight="5dp"
+                    android:paddingTop="7dp"
+                    android:text="@string/stat_completed_title"
+                    android:textColor="#f008" />
+
+                <TextView
+                    android:id="@+id/stat_title_average_template"
+                    android:gravity="right"
+                    android:paddingRight="5dp"
+                    android:paddingTop="7dp"
+                    android:text="@string/stat_average_title"
+                    android:textColor="#f008" />
+
+                <TextView
+                    android:id="@+id/stat_title_best_template"
+                    android:gravity="right"
+                    android:paddingRight="5dp"
+                    android:paddingTop="7dp"
+                    android:text="@string/stat_best_title"
+                    android:textColor="#f008" />
+            </TableRow>
+
+            <TableRow android:id="@+id/stat_detail_template" >
+
+                <TextView
+                    android:id="@+id/stat_detail_label_template"
+                    android:gravity="left"
+                    android:paddingLeft="5dp"
+                    android:textColor="#f000" />
+
+                <TextView
+                    android:id="@+id/stat_detail_played_template"
+                    android:gravity="right"
+                    android:paddingRight="5dp"
+                    android:textColor="#f000" />
+
+                <TextView
+                    android:id="@+id/stat_detail_completed_template"
+                    android:gravity="right"
+                    android:paddingRight="5dp"
+                    android:textColor="#f000" />
+
+                <TextView
+                    android:id="@+id/stat_detail_average_template"
+                    android:gravity="right"
+                    android:paddingRight="5dp"
+                    android:textColor="#f000" />
+
+                <TextView
+                    android:id="@+id/stat_detail_best_template"
+                    android:gravity="right"
+                    android:paddingRight="5dp"
+                    android:textColor="#f000" />
+            </TableRow>
+        </TableLayout>
+    </ScrollView>
+
+</RelativeLayout>

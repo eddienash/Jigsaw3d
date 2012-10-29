@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/adView"
+        layout="@layout/adview" />
+
+ 
+    <RelativeLayout
+        android:id="@+id/layoutRoot"
+        android:layout_above="@id/adView" 
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <android.opengl.GLSurfaceView
+            android:id="@+id/glPuzzleSurface"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <RelativeLayout
+            android:id="@+id/layoutZoom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="2dp" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="8dp"
+                android:background="@drawable/border_108x52" >
+
+                <ImageButton
+                    android:id="@+id/btnZoomOut"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:background="@drawable/btn_zoom_out"
+                    android:contentDescription="@string/btn_zoom_out" />
+
+                <ImageButton
+                    android:id="@+id/btnZoomIn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginTop="2dp"
+                    android:background="@drawable/btn_zoom_in"
+                    android:contentDescription="@string/btn_zoom_in" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/border_108x52" >
+
+                <ToggleButton
+                    android:id="@+id/btnRotate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:background="@drawable/btn_rotate"
+                    android:contentDescription="@string/btn_rotate"
+                    android:textOff=""
+                    android:textOn="" />
+
+                <ToggleButton
+                    android:id="@+id/btnPan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginTop="2dp"
+                    android:background="@drawable/btn_pan"
+                    android:contentDescription="@string/btn_pan"
+                    android:textOff=""
+                    android:textOn="" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btnStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="5dp"
+            android:drawableTop="@drawable/go_icon"
+            android:text="@string/btn_start" />
+
+        <Button
+            android:id="@+id/btnResume"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="5dp"
+            android:drawableTop="@drawable/go_icon"
+            android:text="@string/btn_resume" />
+
+        <LinearLayout
+            android:id="@+id/layoutWon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/btnWonGetNew"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="25"
+                android:text="@string/btn_won_get_new" />
+
+            <Button
+                android:id="@+id/btnWonGetMore"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="25"
+                android:text="@string/btn_won_get_more" />
+
+            <Button
+                android:id="@+id/btnWonStats"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="25"
+                android:text="@string/btn_won_stats" />
+
+            <Button
+                android:id="@+id/btnWonQuit"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="25"
+                android:text="@string/btn_won_quit" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

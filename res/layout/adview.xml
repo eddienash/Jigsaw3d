@@ -1,0 +1,17 @@
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/lib/com.google.ads" >
+
+    <com.google.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="320dp"
+        android:layout_height="50dp"
+        android:layout_centerInParent="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        ads:adSize="BANNER"
+        ads:adUnitId="a15070a3e851425"
+        ads:loadAdOnCreate="true"
+        ads:testDevices="TEST_EMULATOR, 92F9C2A970A329E8261D792A5A5A7DA0, EA46B85DFD8C55D3C38046273DB879A7" />
+
+</merge>

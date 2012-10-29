@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="LargeTitleTheme">
+        <item name="android:windowTitleSize">35dip</item>
+    </style>
+
+    <style name="LargeTitleTextView">
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">33</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="MenuButton">
+        <item name="android:background">@drawable/btn_bkgnd</item>
+        <item name="android:textColor">#e3da7a</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="RadioButton">
+        <item name="android:background">@drawable/btn_bkgnd</item>
+        <item name="android:textColor">#e3da7a</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+</resources>

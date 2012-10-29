@@ -1,0 +1,44 @@
+body {
+	background-color: #ffffff;
+}
+
+h1 {
+	font-family: "Verdana";
+}
+
+h2 {
+	font-family: "Verdana";
+}
+
+h3 {
+	font-family: "Verdana";
+}
+
+p {
+	font-family: "Verdana";
+}
+
+table, th, td {
+	border: 1px solid black;
+	text-align:center;
+	border-collapse:collapse;
+}
+
+p.copyright {
+	text-align:center;
+	margin:0;
+}
+
+.tip {
+	font-weight: bold;
+}
+
+.centered_image {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.credits {
+	font-size: 10px;
+}

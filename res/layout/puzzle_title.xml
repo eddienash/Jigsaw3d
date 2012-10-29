@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" >
+
+    <TextView
+        android:id="@+id/txtPuzzleTitle"
+ 		style="@style/LargeTitleTextView"
+        android:gravity="left|center_vertical" />
+
+    <TextView
+        android:id="@+id/txtPuzzleScore"
+ 		style="@style/LargeTitleTextView"
+        android:gravity="center_horizontal|center_vertical" />
+
+    <TextView
+        android:id="@+id/txtPuzzleClock"
+ 		style="@style/LargeTitleTextView"
+        android:gravity="right|center_vertical" />
+
+</LinearLayout>
