@@ -1,6 +1,5 @@
 package com.toychest3d.Jigsaw3d.Selector;
 
-import java.io.DataInputStream;
 import java.io.IOException;
 
 import com.toychest3d.Jigsaw3d.Installer.ZipInstaller;
@@ -46,7 +45,7 @@ public class Selector extends RadioButton {
 	protected void onSizeChanged(int w, int h, int oldW, int oldH) {
 		
 		try {
-			Drawable icon = new BitmapDrawable(ZipInstaller.textureInputStream(mContext, mModelName, "thumb.png"));
+			Drawable icon = new BitmapDrawable(mContext.getResources(), ZipInstaller.textureInputStream(mContext, mModelName, "thumb.png"));
 			icon.setBounds(new Rect(1,1,h,h));
 			this.setCompoundDrawables(icon, null, null, null);
 		} catch (IOException e) {}
