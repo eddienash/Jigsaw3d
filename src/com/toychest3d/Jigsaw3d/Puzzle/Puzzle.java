@@ -12,12 +12,10 @@ import javax.microedition.khronos.opengles.GL11Ext;
 import com.toychest3d.Jigsaw3d.GLutils.Point3d;
 import com.toychest3d.Jigsaw3d.Installer.ZipInstaller;
 
-import android.app.Activity;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.opengl.GLUtils;
-import android.view.Display;
 
 class Puzzle {
 
@@ -333,8 +331,7 @@ class Puzzle {
 
         gl.glDisable(GL10.GL_DEPTH_TEST);
 		
-		Display display = ((Activity)mContext).getWindowManager().getDefaultDisplay();
-        int crop[] = {0, 0, display.getWidth(), display.getHeight()};
+        int crop[] = {0, 0, PlayRenderer.mSurfaceWidth, PlayRenderer.mSurfaceHeight};
         ((GL11)gl).glTexParameteriv(GL10.GL_TEXTURE_2D, GL11Ext.GL_TEXTURE_CROP_RECT_OES, crop, 0);
         ((GL11Ext)gl).glDrawTexiOES(0, 0, 1, PlayRenderer.mSurfaceWidth, PlayRenderer.mSurfaceHeight);
 
