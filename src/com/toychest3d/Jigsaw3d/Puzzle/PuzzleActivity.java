@@ -81,6 +81,8 @@ public class PuzzleActivity extends Activity {
 		super.onPause();
 		StateMachine2.postEvent(StateMachine2.Gevent.PAUSE);
 		Persistance.save();
+		mSoundPool.stop(mPopSound);
+		mSoundPool.stop(mWinSound);
 	}
 
 	@Override
