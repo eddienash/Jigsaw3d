@@ -79,7 +79,7 @@ public class ZipInstaller {
 		DataOutputStream os = new DataOutputStream(context.openFileOutput(modelName + ".mesh", Context.MODE_PRIVATE));
 
 		// save version
-		os.writeByte(context.getPackageManager().getPackageInfo(context.getPackageName(), 0).versionCode);
+		os.writeInt(context.getPackageManager().getPackageInfo(context.getPackageName(), 0).versionCode);
 
 		// save dog tag
 		byte[] dogtag = DogTag.get(context);
@@ -112,7 +112,7 @@ public class ZipInstaller {
 		DataInputStream is = new DataInputStream(context.openFileInput(modelName + ".mesh"));
 
 		// toss the dogtag data
-		is.readByte(); // version
+		is.readInt(); // version
 		int dogTagLength = is.read();
 		for (int i = 0; i < dogTagLength; i++)
 			is.readByte();
@@ -132,7 +132,7 @@ public class ZipInstaller {
 		DataInputStream is = new DataInputStream(context.openFileInput(modelName + ".mesh"));
 
 		// toss the dogtag data
-		is.read(); // version
+		is.readInt(); // version
 		int dogTagLength = is.read();
 
 		byte[] tag = new byte[dogTagLength];
