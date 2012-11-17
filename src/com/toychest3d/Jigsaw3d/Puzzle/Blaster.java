@@ -12,6 +12,8 @@ import android.content.DialogInterface;
 import android.content.DialogInterface.OnCancelListener;
 import android.opengl.GLU;
 import android.opengl.Matrix;
+import android.view.Gravity;
+import android.view.WindowManager;
 
 //import com.toychest3d.Jigsaw3d.Puzzle.GameEvent.RENDER_CMD;
 import com.toychest3d.Jigsaw3d.R;
@@ -97,6 +99,8 @@ class Blaster {
 		};
 
 		alert = new AlertDialog.Builder(PuzzleActivity.mContext).create();
+		alert.getWindow().clearFlags(WindowManager.LayoutParams.FLAG_DIM_BEHIND);
+		alert.getWindow().setGravity(Gravity.TOP);
 		alert.setCancelable(true);
 		alert.setMessage(PuzzleActivity.mContext.getString(R.string.msg_shuffling));
 		alert.setOnCancelListener(cancelListener);

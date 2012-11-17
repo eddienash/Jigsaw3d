@@ -16,6 +16,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.ViewGroup.MarginLayoutParams;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
@@ -140,6 +141,28 @@ public class SelectorActivity extends Activity {
 				}
 			}
 		}
+	}
+	
+	static void cloneRadioButtonAttributes(RadioButton button, RadioButton template) {
+		
+		// android:layout_width, android:layout_height, android:layout_marginLeft
+		MarginLayoutParams lp = (MarginLayoutParams) template.getLayoutParams();
+		button.setLayoutParams(lp);
+		
+        // android:drawablePadding
+		int cdp = template.getCompoundDrawablePadding();
+		button.setCompoundDrawablePadding(cdp);
+		
+        // android:paddingLeft
+		int pl = template.getPaddingLeft();
+		int pr = template.getPaddingRight();
+		int pt = template.getPaddingTop();
+		int pb = template.getPaddingBottom();
+		button.setPadding(pl, pt, pr, pb);
+		
+		button.setBackgroundDrawable(template.getBackground().getConstantState().newDrawable());
+		button.setTextColor(template.getTextColors());
+		button.setTextSize(template.getTextSize());
 	}
 
 	private RadioGroup mSelectorsGroup, mDifficultiesGroup;

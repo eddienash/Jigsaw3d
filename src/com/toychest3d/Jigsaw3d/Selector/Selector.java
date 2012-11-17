@@ -8,7 +8,6 @@ import android.content.Context;
 import android.graphics.Rect;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
-import android.view.ViewGroup.MarginLayoutParams;
 import android.widget.RadioButton;
 
 public class Selector extends RadioButton {
@@ -22,23 +21,7 @@ public class Selector extends RadioButton {
 		this.setText(prettyName(mModelName));
 		this.setId(mId++);
 		
-		// android:layout_width, android:layout_height, android:layout_marginLeft
-		MarginLayoutParams lp = (MarginLayoutParams) rdoTemplate.getLayoutParams();
-		this.setLayoutParams(lp);
-		
-        // android:drawablePadding
-		int cdp = rdoTemplate.getCompoundDrawablePadding();
-		this.setCompoundDrawablePadding(cdp);
-		
-        // android:paddingLeft
-		int pl = rdoTemplate.getPaddingLeft();
-		int pr = rdoTemplate.getPaddingRight();
-		int pt = rdoTemplate.getPaddingTop();
-		int pb = rdoTemplate.getPaddingBottom();
-		this.setPadding(pl, pt, pr, pb);
-		
-		this.setBackgroundDrawable(rdoTemplate.getBackground().getConstantState().newDrawable());
-		this.setTextColor(rdoTemplate.getTextColors());
+		SelectorActivity.cloneRadioButtonAttributes(this, rdoTemplate);
 	}
 	
 	@Override
