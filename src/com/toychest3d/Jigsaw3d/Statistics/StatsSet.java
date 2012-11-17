@@ -84,19 +84,16 @@ public class StatsSet {
 		
 		// load subtitles
 		String[] prompts = mContext.getResources().getStringArray(R.array.sel_difficulties_prompts);
-		String[] subTitles = new String[prompts.length];
-		for(int i=0; i<prompts.length; i++)
-			subTitles[i] = prompts[i].substring(0, prompts[i].indexOf(':'));
 		
 		TextView title = cloneTextView(mContext, R.id.stat_title_label_template, Selector.prettyName(mModelName));
 		parent.addView(title);
 		
-		for(int i=0; i<subTitles.length; i++) {
+		for(int i=0; i<prompts.length; i++) {
 			
 			TableRow detailRow = new TableRow(mContext);
 			parent.addView(detailRow);
 			
-			detailRow.addView(cloneTextView(mContext, R.id.stat_detail_label_template, subTitles[i]));
+			detailRow.addView(cloneTextView(mContext, R.id.stat_detail_label_template, prompts[i]));
 			detailRow.addView(cloneTextView(mContext, R.id.stat_detail_played_template, String.valueOf(mTotalGames[i])));
 			detailRow.addView(cloneTextView(mContext, R.id.stat_detail_completed_template, String.valueOf(mTotalWins[i])));
 			

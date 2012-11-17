@@ -32,6 +32,7 @@ public class Selector extends RadioButton {
 			icon.setBounds(new Rect(1,1,h,h));
 			this.setCompoundDrawables(icon, null, null, null);
 		} catch (IOException e) {}
+		
 	}
 	
 	public static String prettyName(String name) {

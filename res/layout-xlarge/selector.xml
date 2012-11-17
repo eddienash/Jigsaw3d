@@ -29,7 +29,7 @@
             android:layout_marginTop="5dp"
             android:text="@string/sel_model_prompt"
             android:textColor="#000000"
-            android:textSize="20sp"
+            android:textSize="28sp"
             android:textStyle="bold" >
         </TextView>
 
@@ -49,8 +49,8 @@
 
                 <RadioButton
                     android:id="@+id/rdoDifficultyTemplate"
-                    style="@style/MenuButton"
-                    android:layout_marginTop="10dp"
+                    style="@style/MenuButtonXlarge"
+                    android:layout_marginTop="20dp"
                     android:paddingLeft="48dp" />
             </RadioGroup>
         </ScrollView>
@@ -71,8 +71,8 @@
 
                 <RadioButton
                     android:id="@+id/rdoSelectorTemplate"
-                    style="@style/MenuButton"
-                    android:layout_marginTop="10dp"
+                    style="@style/MenuButtonXlarge"
+                    android:layout_marginTop="20dp"
                     android:drawableLeft="@drawable/icon"
                     android:drawablePadding="12dp"
                     android:paddingLeft="48dp" />

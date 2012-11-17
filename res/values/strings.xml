@@ -5,10 +5,11 @@
     <string name="btn_welcome_title">Jigsaw3D</string>
     <string name="btn_welcome_new">Select a puzzle</string>
     <string name="btn_welcome_resume">Resume</string>
-    <string name="btn_welcome_help">Get Help, Give Feedback, etc.</string>
+    <string name="btn_welcome_help">Help</string>
     <string name="btn_welcome_prefs">Preferences</string>
     <string name="btn_welcome_stats">Statistics</string>
     <string name="btn_welcome_feedback">Feedback</string>
+    <string name="btn_welcome_legal">Legal</string>
     
     <!-- ********** miscellaneous strings ********** -->
     <string name="msg_shuffling">Shuffling&#8230;.</string>
@@ -95,11 +96,11 @@
     
     <string name="sel_difficulty_prompt">Please select difficulty</string>
     <string-array name="sel_difficulties_prompts">
-        <item>Really easy: less than 10 pieces</item>
-        <item>Easy: 10 to 19 pieces</item>
-        <item>Moderate: 20 to 29 pieces</item>
-        <item>Hard: 30 to 39 pieces</item>
-        <item>Really hard: 40 or more pieces</item>
+        <item>Really easy</item>
+        <item>Easy</item>
+        <item>Moderate</item>
+        <item>Hard</item>
+        <item>Really hard</item>
     </string-array>
     
     <!-- ***************** Statistics **************** -->

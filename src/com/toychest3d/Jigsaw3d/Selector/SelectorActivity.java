@@ -14,6 +14,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.TypedValue;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup.MarginLayoutParams;
@@ -162,7 +163,11 @@ public class SelectorActivity extends Activity {
 		
 		button.setBackgroundDrawable(template.getBackground().getConstantState().newDrawable());
 		button.setTextColor(template.getTextColors());
-		button.setTextSize(template.getTextSize());
+		
+		
+		button.setTextSize(TypedValue.COMPLEX_UNIT_PX, template.getTextSize());
+		button.setTextScaleX(template.getTextScaleX());
+		button.setTypeface(template.getTypeface());
 	}
 
 	private RadioGroup mSelectorsGroup, mDifficultiesGroup;
