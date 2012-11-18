@@ -33,8 +33,6 @@
         </activity>
         <activity android:name=".Preferences.PreferencesActivity" >
         </activity>
-        <activity android:name=".Help.HelpActivity" >
-        </activity>
         <activity android:name=".Statistics.StatisticsActivity" >
         </activity>
         <activity

@@ -22,7 +22,7 @@
         android:orientation="vertical" >
 
         <WebView
-            android:id="@+id/txtHelp"
+            android:id="@+id/txtHelp2"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
     </LinearLayout>

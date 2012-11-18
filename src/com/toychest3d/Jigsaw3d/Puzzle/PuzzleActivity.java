@@ -1,7 +1,6 @@
 package com.toychest3d.Jigsaw3d.Puzzle;
 
 import com.toychest3d.Jigsaw3d.R;
-import com.toychest3d.Jigsaw3d.Help.HelpActivity;
 import com.toychest3d.Jigsaw3d.Preferences.PreferencesActivity;
 import com.toychest3d.Jigsaw3d.Puzzle.StateMachine2.Gevent;
 import com.toychest3d.Jigsaw3d.Selector.Selector;
@@ -108,10 +107,6 @@ public class PuzzleActivity extends Activity {
 			StateMachine2.mState = StateMachine2.State.IDLE;
 			Persistance.save();
 			intent = this.getIntent();
-			break;
-
-		case R.id.mnuHelp:
-			intent = new Intent(this, HelpActivity.class);
 			break;
 
 		case R.id.mnuPrefs:

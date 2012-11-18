@@ -1,7 +1,6 @@
 package com.toychest3d.Jigsaw3d.Welcome;
 
 import com.toychest3d.Jigsaw3d.R;
-import com.toychest3d.Jigsaw3d.Help.HelpActivity;
 import com.toychest3d.Jigsaw3d.Installer.ZipInstaller;
 import com.toychest3d.Jigsaw3d.Preferences.PreferencesActivity;
 import com.toychest3d.Jigsaw3d.Puzzle.Persistance;
@@ -16,6 +15,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.webkit.WebView;
 import android.widget.Button;
 
 public class WelcomeActivity extends Activity {
@@ -34,13 +34,18 @@ public class WelcomeActivity extends Activity {
     	findViewById(R.id.btnHelp).setOnClickListener(mOnButtonClicks);
     	findViewById(R.id.btnPreference).setOnClickListener(mOnButtonClicks);
     	findViewById(R.id.btnStatistics).setOnClickListener(mOnButtonClicks);
+    	findViewById(R.id.btnFeedback).setOnClickListener(mOnButtonClicks);
     	
     	Persistance.initialize(this);
 		if(!Persistance.getInstalled())
 			Persistance.setInstalled(ZipInstaller.installIncluded(this));
 		
-		mLayout = findViewById(R.id.layoutWelcome);
-		Persistance.setMenuBackdrop(mLayout);
+		mWelcomeLayout = findViewById(R.id.layoutWelcome);
+		Persistance.setMenuBackdrop(mWelcomeLayout);
+		
+		mWebViewLayout = findViewById(R.id.layoutWebView);
+		
+		mWebView = null;
 	}
 	
 	@Override
@@ -78,7 +83,10 @@ public class WelcomeActivity extends Activity {
 				break;
 			
 			case R.id.btnHelp:
-				intent = new Intent(mContext, HelpActivity.class);
+				mWebView = ((WebView) findViewById(R.id.txtHelp));
+				mWebViewLayout.setVisibility(View.VISIBLE);
+				mWelcomeLayout.setVisibility(View.GONE);
+				mWebView.loadUrl("file:///android_asset/html/help.html");
 				break;
 			
 			case R.id.btnPreference:
@@ -87,6 +95,13 @@ public class WelcomeActivity extends Activity {
 			
 			case R.id.btnStatistics:
 				intent = new Intent(mContext, StatisticsActivity.class);
+				break;
+				
+			case R.id.btnFeedback:
+				intent = new Intent(Intent.ACTION_SEND);
+				intent.setType("message/rfc822"); // email only
+				intent.putExtra(Intent.EXTRA_EMAIL, new String[] {"jigsaw3d@kidlearn.com"}); // recipients
+				intent.putExtra(Intent.EXTRA_SUBJECT, "Jigsaw3d feedback");
 				break;
 			
 			}
@@ -98,6 +113,23 @@ public class WelcomeActivity extends Activity {
 		}
 	};
 	
+	@Override
+	public void onBackPressed() {
+
+		if(mWebView != null) {
+			if (mWebView.canGoBack())
+				mWebView.goBack();
+			else {
+				mWebViewLayout.setVisibility(View.GONE);
+				mWelcomeLayout.setVisibility(View.VISIBLE);
+				mWebView = null;
+			}
+		}
+		else
+			super.onBackPressed();
+	}
+	
 	private Context mContext;
-	public static View mLayout;
+	public static View mWelcomeLayout, mWebViewLayout;
+	private WebView mWebView;
 }

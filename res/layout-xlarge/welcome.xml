@@ -14,6 +14,20 @@
     <!-- android:layout_above="@id/adView" -->
 
     <LinearLayout
+        android:id="@+id/layoutWebView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical" >
+
+        <WebView
+            android:id="@+id/txtHelp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        
+    </LinearLayout>
+
+    <LinearLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/layoutWelcome"
         android:layout_width="match_parent"

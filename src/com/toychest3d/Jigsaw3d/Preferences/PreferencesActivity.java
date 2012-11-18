@@ -35,7 +35,7 @@ public class PreferencesActivity extends android.preference.PreferenceActivity i
 		Persistance.loadUserPrefs(this);
 		
 		if(key.equals(this.getResources().getString(R.string.prefs_backdrops_key))) {
-			Persistance.setMenuBackdrop(WelcomeActivity.mLayout);
+			Persistance.setMenuBackdrop(WelcomeActivity.mWelcomeLayout);
 			Persistance.setMenuBackdrop(SelectorActivity.mLayoutMain);
 			Persistance.setMenuBackdrop(SelectorActivity.mLayoutDif);
 			Persistance.setMenuBackdrop(SelectorActivity.mLayoutSel);

@@ -7,11 +7,6 @@
     </item>
 
     <item
-        android:id="@+id/mnuHelp"
-        android:title="@string/mnu_help">
-    </item>
-
-    <item
         android:id="@+id/mnuPrefs"
         android:title="@string/mnu_prefs">
     </item>
