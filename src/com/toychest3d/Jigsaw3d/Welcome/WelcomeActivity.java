@@ -35,6 +35,7 @@ public class WelcomeActivity extends Activity {
     	findViewById(R.id.btnPreference).setOnClickListener(mOnButtonClicks);
     	findViewById(R.id.btnStatistics).setOnClickListener(mOnButtonClicks);
     	findViewById(R.id.btnFeedback).setOnClickListener(mOnButtonClicks);
+    	findViewById(R.id.btnLegal).setOnClickListener(mOnButtonClicks);
     	
     	Persistance.initialize(this);
 		if(!Persistance.getInstalled())
@@ -83,10 +84,7 @@ public class WelcomeActivity extends Activity {
 				break;
 			
 			case R.id.btnHelp:
-				mWebView = ((WebView) findViewById(R.id.txtHelp));
-				mWebViewLayout.setVisibility(View.VISIBLE);
-				mWelcomeLayout.setVisibility(View.GONE);
-				mWebView.loadUrl("file:///android_asset/html/help.html");
+				startWebView("file:///android_asset/html/help.html");
 				break;
 			
 			case R.id.btnPreference:
@@ -104,6 +102,9 @@ public class WelcomeActivity extends Activity {
 				intent.putExtra(Intent.EXTRA_SUBJECT, "Jigsaw3d feedback");
 				break;
 			
+			case R.id.btnLegal:
+				startWebView("file:///android_asset/html/legal.html");
+				break;
 			}
 			
 			if(intent != null) {
@@ -112,6 +113,15 @@ public class WelcomeActivity extends Activity {
 			}
 		}
 	};
+	
+	private void startWebView(String url) {
+
+		mWebView = ((WebView) findViewById(R.id.txtHelp));
+		mWebViewLayout.setVisibility(View.VISIBLE);
+		mWelcomeLayout.setVisibility(View.GONE);
+		mWebView.loadUrl(url);
+		mWebView.clearHistory();
+	}
 	
 	@Override
 	public void onBackPressed() {
