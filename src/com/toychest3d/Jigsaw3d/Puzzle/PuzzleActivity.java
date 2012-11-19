@@ -131,7 +131,6 @@ public class PuzzleActivity extends Activity {
 		findViewById(R.id.btnStart).setOnClickListener(mGuiListener);
 		findViewById(R.id.btnResume).setOnClickListener(mGuiListener);
 		findViewById(R.id.btnWonGetNew).setOnClickListener(mGuiListener);
-		findViewById(R.id.btnWonGetMore).setOnClickListener(mGuiListener);
 		findViewById(R.id.btnWonStats).setOnClickListener(mGuiListener);
 		findViewById(R.id.btnWonQuit).setOnClickListener(mGuiListener);
 		
@@ -158,8 +157,6 @@ public class PuzzleActivity extends Activity {
 				intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
 				mContext.startActivity(intent);
 				((Activity)PuzzleActivity.mContext).finish();
-				break;
-			case R.id.btnWonGetMore:
 				break;
 			case R.id.btnWonStats:
 				intent = new Intent(mContext, StatisticsActivity.class);

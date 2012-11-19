@@ -28,7 +28,6 @@
     <string name="mnu_restart">Restart</string>
     <string name="dlg_winner">Congratulations!</string>
     <string name="btn_won_get_new">Select a new puzzle</string>
-    <string name="btn_won_get_more">Get more puzzles</string>
     <string name="btn_won_stats">Statistics</string>
     <string name="btn_won_quit">Quit</string>
     
@@ -90,7 +89,7 @@
     <string name="prefs_reset_ok">Reset</string>
     
     <!-- ***************** Selector **************** -->
-    <string name="sel_model_prompt">Please select a model</string>
+    <string name="sel_model_prompt">Please select a model.\n(More models are coming -\nwatch for updates!)</string>
     
     <string name="sel_default_model_name">cube</string>
     
