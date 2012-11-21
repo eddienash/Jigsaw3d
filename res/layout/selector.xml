@@ -74,7 +74,7 @@
                     android:id="@+id/rdoSelectorTemplate"
                     style="@style/MenuButton"
                     android:layout_marginTop="10dp"
-                    android:drawableLeft="@drawable/icon"
+                    android:drawableLeft="@drawable/selector_icon_template"
                     android:drawablePadding="12dp"
                     android:paddingLeft="48dp" />
             </RadioGroup>
