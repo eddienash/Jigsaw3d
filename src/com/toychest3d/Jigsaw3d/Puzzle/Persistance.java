@@ -75,15 +75,8 @@ public class Persistance {
 		mEdit.commit();
 	}
 	
-	public static void setFirstTime(boolean firstTime) {
-		mEdit.putBoolean("FirstTime", firstTime);
-		mEdit.commit();
-	}
-	
 	// ************************************ Game State GETS ****************************************
 	
-	public static boolean getFirstTime() {return mSharedPreference.getBoolean("FirstTime", true);}
-
 	public static String getStats(String modelName) {return mSharedPreference.getString("Stats_" + modelName, null);}
 
 	public static boolean getInstalled() {return mSharedPreference.getBoolean("InstallFlag", false);}

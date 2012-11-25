@@ -10,7 +10,9 @@ import com.toychest3d.Jigsaw3d.Selector.SelectorActivity;
 import com.toychest3d.Jigsaw3d.Statistics.StatisticsActivity;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -38,7 +40,9 @@ public class WelcomeActivity extends Activity {
     	findViewById(R.id.btnLegal).setOnClickListener(mOnButtonClicks);
     	
     	Persistance.initialize(this);
-		if(!Persistance.getInstalled())
+    	new_install = !Persistance.getInstalled();
+    	
+		if(new_install)
 			Persistance.setInstalled(ZipInstaller.installIncluded(this));
 		
 		mWelcomeLayout = findViewById(R.id.layoutWelcome);
@@ -54,7 +58,9 @@ public class WelcomeActivity extends Activity {
 		
 		Button resume = (Button)findViewById(R.id.btnResumePuzzle);
 		String btnText = getResources().getString(R.string.btn_welcome_resume);
-		String modelName = Persistance.getModelName();
+		
+		// dont allow resume on new install
+		String modelName = new_install ? null : Persistance.getModelName();
 		
 		if(modelName != null) {
 			resume.setEnabled(true);
@@ -64,9 +70,27 @@ public class WelcomeActivity extends Activity {
 			resume.setEnabled(false);
 
 		resume.setText(btnText);
+		
+		// suggest reading help at new install
+		if (new_install) {
+			AlertDialog alert = new AlertDialog.Builder(this).create();
+			alert.setCancelable(true);
+			alert.setMessage(this.getString(R.string.msg_first_time));
+			alert.setButton(AlertDialog.BUTTON_POSITIVE, "OK", onHelpPromptClick);
+			alert.setButton(AlertDialog.BUTTON_NEGATIVE, "No Thanks", onHelpPromptClick);
+			alert.show();
+		}
 
     	super.onResume();
 	}
+	
+	private DialogInterface.OnClickListener onHelpPromptClick = new DialogInterface.OnClickListener() {
+		@Override
+		public void onClick(DialogInterface dialog, int which) {
+			if(which == AlertDialog.BUTTON_POSITIVE)
+				findViewById(R.id.btnHelp).performClick();
+		}
+	};
 	
 	private OnClickListener mOnButtonClicks = new OnClickListener() {
 		public void onClick(View arg0) {
@@ -142,4 +166,5 @@ public class WelcomeActivity extends Activity {
 	private Context mContext;
 	public static View mWelcomeLayout, mWebViewLayout;
 	private WebView mWebView;
+	private boolean new_install;
 }
