@@ -14,6 +14,7 @@
     <!-- ********** miscellaneous strings ********** -->
     <string name="msg_shuffling">Shuffling&#8230;.</string>
     <string name="msg_loading">Loading puzzle&#8230;.</string>
+    <string name="msg_first_time">We suggest you read the help before doing your first puzzle. Would you like to read the help now?.</string>
     
     <!-- ********** Feedback strings ********** -->
     <string name="btn_send">Send</string>
