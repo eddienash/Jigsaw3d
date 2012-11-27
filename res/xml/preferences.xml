@@ -27,7 +27,7 @@
         android:defaultValue="@string/prefs_backdrops_default"
         />
     
-    <com.toychest3d.Jigsaw3d.Preferences.StatReset
+    <com.kidlearn.Jigsaw3d.Preferences.StatReset
             android:title="@string/prefs_reset_title"
             android:dialogMessage="@string/prefs_reset_prompt"
             android:positiveButtonText="@string/prefs_reset_ok" />
