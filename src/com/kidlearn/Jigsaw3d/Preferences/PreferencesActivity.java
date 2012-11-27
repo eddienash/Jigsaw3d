@@ -12,7 +12,7 @@ import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.PreferenceScreen;
 
-@SuppressWarnings("deprecation")
+//@SuppressWarnings("deprecation")
 public class PreferencesActivity extends android.preference.PreferenceActivity implements OnSharedPreferenceChangeListener {
 
 	@Override
