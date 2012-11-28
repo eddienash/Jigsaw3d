@@ -31,24 +31,6 @@ class PlayRenderer implements GLSurfaceView.Renderer {
 		gl.glEnableClientState(GL10.GL_VERTEX_ARRAY);
 		gl.glEnableClientState(GL10.GL_NORMAL_ARRAY);
 
-		/*
-		int[] cuts = new int[3];
-		for(int x = 0; x<4; x++) {
-			cuts[0] = x;
-			for(int y = 0; y<4; y++) {
-				cuts[1] = y;
-				for(int z = 0; z<4; z++) {
-					cuts[2] = z;
-					try {
-						Puzzle.initialize (gl, mContext, Persistance.getModelName(), cuts);
-					} catch (IOException e) {
-						e.printStackTrace();
-					}
-					Log.d("nash","model x,y,z,cuts: " + Persistance.getModelName() + " " + x + " " + y + " " + z + " " + Puzzle.mPieces.size());
-				}
-			}
-		}
-		*/
 		try {
 			Puzzle.initialize (gl, mContext, Persistance.getModelName(), Persistance.getMeshCuts());
 		} catch (IOException e) {

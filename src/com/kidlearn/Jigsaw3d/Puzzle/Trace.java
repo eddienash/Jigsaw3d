@@ -1,3 +1,4 @@
+/*
 package com.kidlearn.Jigsaw3d.Puzzle;
 
 import java.util.ArrayList;
@@ -135,3 +136,4 @@ public class Trace {
 	private static ArrayList<PieceTransforms.AXIS> hit1axis;
 	private static ArrayList<PieceTransforms.POSITION> hit1position;
 }
+*/

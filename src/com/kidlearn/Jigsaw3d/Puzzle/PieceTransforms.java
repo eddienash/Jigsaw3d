@@ -6,7 +6,7 @@ import javax.microedition.khronos.opengles.GL10;
 
 import android.opengl.GLU;
 import android.opengl.Matrix;
-import android.util.Log;
+//import android.util.Log;
 import android.view.MotionEvent;
 
 import com.kidlearn.Jigsaw3d.GLutils.Common;
@@ -24,7 +24,7 @@ class PieceTransforms {
 
 		setAxis(moving, still, dVector, AXIS.X);
 		POSITION positionX = calcEnterAndLeave();
-		Trace.traceHit(moving, still, dVector, AXIS.X, positionX, mMovingMin, mMovingMax, mStillMin, mStillMax, mD, mTentry, mTleave);
+		//Trace.traceHit(moving, still, dVector, AXIS.X, positionX, mMovingMin, mMovingMax, mStillMin, mStillMax, mD, mTentry, mTleave);
 		if (positionX == POSITION.NoHit)
 			return false;
 		else if (positionX == POSITION.Overlap)
@@ -32,7 +32,7 @@ class PieceTransforms {
 
 		setAxis(moving, still, dVector, AXIS.Y);
 		POSITION positionY = calcEnterAndLeave();
-		Trace.traceHit(moving, still, dVector, AXIS.Y, positionY, mMovingMin, mMovingMax, mStillMin, mStillMax, mD, mTentry, mTleave);
+		//Trace.traceHit(moving, still, dVector, AXIS.Y, positionY, mMovingMin, mMovingMax, mStillMin, mStillMax, mD, mTentry, mTleave);
 		if (positionY == POSITION.NoHit)
 			return false;
 		else if (positionY == POSITION.Overlap)
@@ -40,7 +40,7 @@ class PieceTransforms {
 
 		setAxis(moving, still, dVector, AXIS.Z);
 		POSITION positionZ = calcEnterAndLeave();
-		Trace.traceHit(moving, still, dVector, AXIS.Z, positionZ, mMovingMin, mMovingMax, mStillMin, mStillMax, mD, mTentry, mTleave);
+		//Trace.traceHit(moving, still, dVector, AXIS.Z, positionZ, mMovingMin, mMovingMax, mStillMin, mStillMax, mD, mTentry, mTleave);
 		if (positionZ == POSITION.NoHit)
 			return false;
 		else if (positionZ == POSITION.Overlap)
@@ -48,10 +48,10 @@ class PieceTransforms {
 		
 		// test for pieces jammed together
 		if (overlapCount == 3) {
-			Log.d("nash", "overlapCount == 3. moving, still:  " + moving.mIndex + " " + still.mIndex);
+			//Log.d("nash", "overlapCount == 3. moving, still:  " + moving.mIndex + " " + still.mIndex);
 			RuntimeException e = new RuntimeException("overlapCount == 3. moving, still:  " + moving.mIndex + " " + still.mIndex);
-			Trace.traceAll(new float[] { 88, 88, 88 }, -88);
-			Trace.dump(still, moving);
+			//Trace.traceAll(new float[] { 88, 88, 88 }, -88);
+			//Trace.dump(still, moving);
 			throw (e);
 		}
 
@@ -357,7 +357,7 @@ class PieceTransforms {
 		float d = trans[piece.mIndex * 3] * trans[piece.mIndex * 3];
 		d += trans[(piece.mIndex * 3) + 1] * trans[(piece.mIndex * 3) + 1];
 		d += trans[(piece.mIndex * 3) + 2] * trans[(piece.mIndex * 3) + 2];
-		d = (float) Math.sqrt(d);
+		d = android.util.FloatMath.sqrt(d);
 
 		// / too far to snap
 		if (d > (piece.mDiagonal / 4))

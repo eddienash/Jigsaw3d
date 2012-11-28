@@ -73,7 +73,7 @@ class Blaster {
 		
 		alert = null;
 		
-		Trace.initialize();
+		//Trace.initialize();
 	}
 	
 	static void start() {
@@ -156,7 +156,7 @@ class Blaster {
 
 	private static void advance(GameClock clock) {
 		
-		Trace.traceAll(new float[] {99,99,99}, -99);
+		//Trace.traceAll(new float[] {99,99,99}, -99);
 
 		// swap the queues
 		mThisQ = mThisQ == mQ1 ? mQ2 : mQ1;
@@ -171,7 +171,7 @@ class Blaster {
 			if (moving.mCurrentExplodeQ != mThisQ)
 				continue;
 			
-			Trace.traceAll(new float[] {66,66,66}, -66);
+			//Trace.traceAll(new float[] {66,66,66}, -66);
 
 			float[] deltaV = new float[] {moving.mV.x * clock.deltaSecs, moving.mV.y * clock.deltaSecs, moving.mV.z * clock.deltaSecs};
 
@@ -190,8 +190,8 @@ class Blaster {
 			// move the piece (scale will b1 1 if no hit)
 			float[] trans = PieceTransforms.addToTranslates(moving.mIndex, deltaV[0] * scale, deltaV[1] * scale, deltaV[2] * scale);
 
-			Trace.traceAll(new float[] {44,44,44}, -44);
-			Trace.traceAll(deltaV, scale);
+			//Trace.traceAll(new float[] {44,44,44}, -44);
+			//Trace.traceAll(deltaV, scale);
 
 			float[] drawTransform = new float[16];
 			Matrix.setIdentityM(drawTransform, 0);
