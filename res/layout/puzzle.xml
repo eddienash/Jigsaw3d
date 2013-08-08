@@ -4,11 +4,11 @@
     android:layout_height="match_parent"
     android:gravity="center_horizontal"
     android:orientation="vertical" >
-
+<!--  
     <include
         android:id="@+id/adView"
         layout="@layout/adview" />
-
+-->
  
     <RelativeLayout
         android:id="@+id/layoutRoot"
